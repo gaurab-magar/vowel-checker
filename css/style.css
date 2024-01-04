@@ -1,11 +1,11 @@
-.main {
+.container {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .card {
-  background-color: hotpink !important;
-  min-width: 25% !important;
+  width: 35%;
+}
+
+input:focus {
+  box-shadow: none !important;
 }

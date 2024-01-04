@@ -8,25 +8,20 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="main">
-                <div class="card border-0 shadow-lg text-white text-center">
-                    <div class="card-title p-3 pb-0 mb-1">
-                        <h4>Vowel-Counter</h4>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card border-0 rounded-3 bg-light shadow-lg text-center">
+            <div class="card-title pt-4">
+                <h3 class="fw-bold fst-itlaic">Age Calculator</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group d-flex flex-column gap-3">
+                    <div class="wrap">
+                        <label for="datetimeInput" class="text-muted fw-light">Select Date of your Birth:</label>
+                        <input type="date" class="form-control" id="datetimeInput" name="datetimeInput">
                     </div>
-                    <div class="card-body">
-                        <form action="" id="vowelForm">
-                            <div class="d-grid">
-                                <label for="inputText" class="text-start">Enter Text:</label>
-                                <textarea placeholder="Enter Your Text Here" type="text" name="inputText" id="inputText" class="border-0" rows="5" required></textarea>
-                                <button type="button" class="btn btn-success fw-bold my-2">Count</button>
-                                <button type="button" id="clear" class="btn btn-danger fw-bold my-2">Reset</button>
-                            </div>
-                            <h6 id="Result">Result:</h6>
-                        </form>
-                    </div>
+                    <button class="btn btn-primary fw-bold mb-3" id="Calculate">Calculate Age</button>
                 </div>
+                  <h4 class="fw-bold fs-4 result"></h4>
             </div>
         </div>
     </div>
