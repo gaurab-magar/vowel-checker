@@ -1,11 +1,24 @@
-.container {
+.container-fluid {
   height: 100vh;
 }
 
 .card {
-  width: 35%;
+  width: 30%;
 }
 
 input:focus {
   box-shadow: none !important;
+}
+
+.result p {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 80%;
+  }
 }

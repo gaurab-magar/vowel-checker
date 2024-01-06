@@ -8,20 +8,31 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
-    <div class="container d-flex justify-content-center align-items-center">
-        <div class="card border-0 rounded-3 bg-light shadow-lg text-center">
-            <div class="card-title pt-4">
-                <h3 class="fw-bold fst-itlaic">Age Calculator</h3>
+    <div class="container-fluid bg-light d-flex justify-content-center align-items-center">
+        <div class="card border-0 shadow-lg text-center">
+            <div class="card-title">
+                <h3 class="pt-3">Tip-Calculator</h3>
             </div>
             <div class="card-body">
-                <div class="form-group d-flex flex-column gap-3">
-                    <div class="wrap">
-                        <label for="datetimeInput" class="text-muted fw-light">Select Date of your Birth:</label>
-                        <input type="date" class="form-control" id="datetimeInput" name="datetimeInput">
+                <form action="/tip_calculator">
+                    <div class="d-grid wrap">
+                        <label for="cost" class="text-muted text-start ps-2">Cost of the meal:</label>
+                        <input type="number" class="form-control" id="cost" placeholder="Enter cost of the meal">
                     </div>
-                    <button class="btn btn-primary fw-bold mb-3" id="Calculate">Calculate Age</button>
-                </div>
-                  <h4 class="fw-bold fs-4 result"></h4>
+                    <br>
+                    <div class="d-grid wrap">
+                        <label for="cost" class="text-muted text-start ps-2">Tip Percentage(%):</label>
+                        <input type="number" class="form-control" id="tip" placeholder="Enter the Tips Amount">
+                    </div>
+                    <div class="d-grid pt-4 mb-0">
+                        <div class="btn btn-success fw-bold">Calculate</div>
+                        <hr>
+                    </div>
+                    <div class="result fst-italic">
+                        <p id="result">Total amount : <strong>$</strong></p>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
