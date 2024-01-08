@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vowel-Counter</title>
+    <title>todo</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
-    <div class="container-fluid bg-light d-flex justify-content-center align-items-center">
-        <div class="card border-0 shadow-lg text-center">
-            <div class="card-title">
-                <h3 class="pt-3">Tip-Calculator</h3>
-            </div>
-            <div class="card-body">
-                <form action="/tip_calculator">
-                    <div class="d-grid wrap">
-                        <label for="cost" class="text-muted text-start ps-2">Cost of the meal:</label>
-                        <input type="number" class="form-control" id="cost" placeholder="Enter cost of the meal">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-light mt-4 shadow-lg border-0 rounded-2">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h5 class="card-title text-center fw-bold fs-4">
+                                Todo List App
+                            </h5>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input type="text" id="taskInput" class="form-control">
+                                </div>
+                                <div class="col-md-2 mt-sm-4 mt-md-0">
+                                    <button id="addBtn" class="btn btn-primary w-100">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body mt-4">
+                            <ul class="list-group" id="tasksList">
+                                <!-- <li class="list-group-item border-0">
+                                    <span class="bg-white d-flex justify-content-between align-items-center">
+                                        <p class="m-0 fw-bold">this is the first todo list or item</p>
+                                        <button class="btn btn-danger">Del</button>
+                                    </span>
+                                </li>
+                                <li class="list-group-item border-0 mt-3">
+                                    <span class="bg-white d-flex justify-content-between align-items-center">
+                                        <p class="m-0 fw-bold">this is the first todo list or item</p>
+                                        <button class="btn btn-danger">Del</button>
+                                    </span>
+                                </li> -->
+                            </ul>
+                        </div>
+                        
                     </div>
-                    <br>
-                    <div class="d-grid wrap">
-                        <label for="cost" class="text-muted text-start ps-2">Tip Percentage(%):</label>
-                        <input type="number" class="form-control" id="tip" placeholder="Enter the Tips Amount">
-                    </div>
-                    <div class="d-grid pt-4 mb-0">
-                        <div class="btn btn-success fw-bold">Calculate</div>
-                        <hr>
-                    </div>
-                    <div class="result fst-italic">
-                        <p id="result">Total amount : <strong>$</strong></p>
-                    </div>
-
-                </form>
+                </div>
             </div>
         </div>
     </div>
+   
     <script src="./js/styel.js"></script>
 </body>
 </html>

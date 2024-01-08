@@ -1,19 +1,23 @@
-let costValue = document.getElementById('cost');
-let tipValue = document.getElementById('tip');
-let calculate = document.querySelector('.btn');
-let result = document.getElementById('result');
+let inputValue = document.getElementById('taskInput');
+let addButton = document.getElementById('addBtn');
+let listGroup = document.querySelector('.list-group');
 
-calculate.addEventListener('click',function(){
-    let cost= parseFloat(costValue.value);
-    let tipPercentage=parseFloat(tipValue.value);
-    if(!isFinite(cost) || !isFinite(tipPercentage)){
-        alert("Please enter a valid number");
-        return false;
-        }else{
-            let tipAmount=parseFloat((cost * (tipPercentage/100)).toFixed(2));
-            let totalCost=(cost + tipAmount);
-            //displaying the results
-            result.innerHTML="Tip Amount: $"+tipAmount+"<br> Total Cost"
-            + " including Tip: $"+totalCost;
-            };
-}) 
+addButton.addEventListener('click',function(){
+    const newTodo = inputValue.value;
+    if(newTodo !== ""){
+        const liItem = document.createElement('li');
+        liItem.classList.add("list-group-item", "border-0" ,"mt-3","fw-bold","d-flex","justify-content-between","align-items-center");
+        liItem.innerText = newTodo;
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add("btn","btn-danger","btn-scale-on-hover");
+        deleteBtn.textContent = "DEL"
+        deleteBtn.addEventListener('click',function(){
+            liItem.remove();
+        })
+        liItem.appendChild(deleteBtn);
+        listGroup.appendChild(liItem);
+        inputValue.value = "";
+    }
+
+
+})
