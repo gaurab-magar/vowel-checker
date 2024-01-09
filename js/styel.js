@@ -1,23 +1,17 @@
-let inputValue = document.getElementById('taskInput');
-let addButton = document.getElementById('addBtn');
-let listGroup = document.querySelector('.list-group');
+function updateClock(){
+    let now = new Date();
+    let hour = now.getHours().toString().padStart(2,'0');
+    let minute = now.getMinutes().toString().padStart(2,'0');;
+    let second = now.getSeconds().toString().padStart(2,'0');;
 
-addButton.addEventListener('click',function(){
-    const newTodo = inputValue.value;
-    if(newTodo !== ""){
-        const liItem = document.createElement('li');
-        liItem.classList.add("list-group-item", "border-0" ,"mt-3","fw-bold","d-flex","justify-content-between","align-items-center");
-        liItem.innerText = newTodo;
-        const deleteBtn = document.createElement('button');
-        deleteBtn.classList.add("btn","btn-danger","btn-scale-on-hover");
-        deleteBtn.textContent = "DEL"
-        deleteBtn.addEventListener('click',function(){
-            liItem.remove();
-        })
-        liItem.appendChild(deleteBtn);
-        listGroup.appendChild(liItem);
-        inputValue.value = "";
-    }
+    let hours = document.getElementById('hour');    
+    let minutes = document.getElementById('minute');    
+    let seconds = document.getElementById('second');
 
+    hours.textContent = hour;
+    minutes.textContent = minute;
+    seconds.textContent = second;
 
-})
+}
+
+setInterval(updateClock,1000);
