@@ -8,43 +8,41 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-6">
-                <div class="card bg-light mt-4 shadow-lg border-0 rounded-2">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5 class="card-title text-center fw-bold fs-4">
-                                Todo List App
-                            </h5>
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-10">
-                                    <input type="text" id="taskInput" class="form-control">
-                                </div>
-                                <div class="col-md-2 mt-sm-4 mt-md-0">
-                                    <button id="addBtn" class="btn btn-primary w-100">Add</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="body mt-4">
-                            <ul class="list-group" id="tasksList">
-                                <!-- <li class="list-group-item border-0">
-                                    <span class="bg-white d-flex justify-content-between align-items-center">
-                                        <p class="m-0 fw-bold">this is the first todo list or item</p>
-                                        <button class="btn btn-danger">Del</button>
-                                    </span>
-                                </li>
-                                <li class="list-group-item border-0 mt-3">
-                                    <span class="bg-white d-flex justify-content-between align-items-center">
-                                        <p class="m-0 fw-bold">this is the first todo list or item</p>
-                                        <button class="btn btn-danger">Del</button>
-                                    </span>
-                                </li> -->
-                            </ul>
-                        </div>
-                        
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card border-0 rounded-3 shadow-lg">
+            <div class="card-header py-3 fw-bold text-center">
+                <h3 class="fw-bold">Expense Card</h3>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-between">
+                    <div class="col-auto">
+                        <h5 class="mb-4 mt-2 fst-italic">Expense Details:</h5>
                     </div>
+                    <div class="col-auto ">
+                        <button id="item-add" class="btn btn-success shadow-lg fw-bold">AddToCard</button>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <ul class="list-unstyled">
+                        <li class="shadow-lg">
+                            <span class="d-flex justify-content-between align-items-center">
+                                <p>Food</p> <p>$40</p><button class="btn btn-danger fw-bold">Del</button>
+                            </span>
+                        </li>
+                        <li class="shadow-lg">
+                            <span class="d-flex justify-content-between align-items-center">
+                                <p>Food</p> <p>$40</p><button class="btn btn-danger fw-bold">Del</button>
+                            </span>
+                        </li>
+                        <li class="shadow-lg">
+                            <span class="d-flex justify-content-between align-items-center">
+                                <p>Food</p> <p>$40</p><button class="btn btn-danger fw-bold">Del</button>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row my-2">
+                    <h5 id="result" class="fw-bold text-end">Total Expenses : $120</h5>
                 </div>
             </div>
         </div>
